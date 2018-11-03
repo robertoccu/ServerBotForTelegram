@@ -1,0 +1,20 @@
+#
+# bot:
+#     token:
+#         Token identifying the bot. Provided by Telegram (BotFather).
+#
+#     chatID:
+#         ID of the chats where the bot will operate.
+#
+#         priority:
+#             ID of the chat where priority messages will be sent.
+#         log:
+#             ID of the chat where log messages will be sent.
+#         public:
+#             ID of the chat where priority messages will be sent.
+bot:
+    token:
+    chatID:
+        priority:
+        log:
+        public:
