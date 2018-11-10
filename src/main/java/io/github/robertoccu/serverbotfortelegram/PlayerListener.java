@@ -21,7 +21,7 @@ public class PlayerListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         if(!event.getPlayer().hasPlayedBefore()) {
             TelegramBot.sendMessage("¡Hay un nuevo jugador! Acaba de entrar " + event.getPlayer().getName()
-                + " al servidor. ¿Quién va a ir a ayudarle?", TelegramBot.MessageType.PRIORITY);
+                + " al servidor. ¿Quién va a ir a ayudarle?", TelegramBot.MessageType.LOG);
         } else if (ServerBotForTelegram.perms.playerInGroup(event.getPlayer(), "invitado")) {
             TelegramBot.sendMessage("El jugador invitado " + event.getPlayer().getName()
                     + " ha vuelto. Es posible que necesite una ayudita.", TelegramBot.MessageType.LOG);

@@ -1,5 +1,6 @@
 package io.github.robertoccu.serverbotfortelegram;
 
+import io.github.robertoccu.serverbotfortelegram.TelegramBot.MessageType;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,6 +24,7 @@ public class ServerBotForTelegram extends JavaPlugin {
         getCommand("priorityTelegram").setExecutor(new Commands());
         getCommand("logTelegram").setExecutor(new Commands());
         getCommand("publicTelegram").setExecutor(new Commands());
+        TelegramBot.sendMessage("Acaba de abrirse el servidor o se ha habilitado ServerBot. ¡Server funcionado!", MessageType.LOG);
       } else {
         getLogger().info("ServerBotForTelegram can't found Permissions. Is Vault installed?");
       }
@@ -31,6 +33,7 @@ public class ServerBotForTelegram extends JavaPlugin {
   }
 
   public void onDisable() {
+    TelegramBot.sendMessage("El servidor se ha cerrado o ServerBot ha sido deshabilitado. ¿Se ha caido?", MessageType.PRIORITY);
   }
 
   private boolean setupPermissions() {

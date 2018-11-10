@@ -16,14 +16,14 @@ public class Commands implements CommandExecutor {
         String messageUrl;
         switch (cmd.getName()) {
             case "ayuda":
-                if (sender instanceof Player && sender.hasPermission("serverBotForTelegram.ayuda")) {
+                if (sender instanceof Player && sender.hasPermission("serverBotForTelegram.ayuda") && args.length != 0) {
                     Player player = (Player)sender;
                     String message = "¡Un usuario pide ayuda! " +
                             player.getName() + " [" + ServerBotForTelegram.perms.getPrimaryGroup(player) + "] (" + player.getLocation().getBlockX() + ", "
                             + player.getLocation().getBlockY() + ", " + player.getLocation().getBlockZ() + "): "
                             + String.join(" ", args);
                     messageUrl = message.replace(" ", "%20");
-                    if (TelegramBot.sendMessage(messageUrl, TelegramBot.MessageType.PRIORITY)) {
+                    if (TelegramBot.sendMessage(messageUrl, TelegramBot.MessageType.LOG)) {
                         player.sendMessage(ChatColor.GREEN+"Se ha enviado el mensaje. Los GM intentarán solventar tu problema lo antes posible pero no recibirás una respuesta. Abusar de este método de contacto puede provocar sanciones. Este es el mensaje que has enviado: " + String.join(" ", args));
                     } else {
                         player.sendMessage(ChatColor.RED+"El mensaje de ayuda no ha podido ser enviado. Ha sido un error nuestro, lo sentimos. Prueba a contactar a un GM por Discord (Información sobre Discord: https://goo.gl/o4vs2f )");
