@@ -58,6 +58,18 @@ public class Commands implements CommandExecutor {
                     sender.sendMessage(MESSAGE_ERROR_PERMISSIONS);
                 }
                 return true;
+            case "log2Telegram":
+                if (sender.hasPermission("serverBotForTelegram.sendRawMessages")) {
+                    messageUrl = String.join(" ", args).replace(" ", "%20");
+                    if (TelegramBot.sendMessage(messageUrl, TelegramBot.MessageType.LOG2)) {
+                        sender.sendMessage(ChatColor.AQUA+"Mensaje enviado: "+ChatColor.RESET+String.join(" ", args));
+                    } else {
+                        sender.sendMessage(ChatColor.RED+"No se ha enviado el mensaje: "+ChatColor.RESET+String.join(" ", args));
+                    }
+                } else {
+                    sender.sendMessage(MESSAGE_ERROR_PERMISSIONS);
+                }
+                return true;
             case "publicTelegram":
                 if (sender.hasPermission("serverBotForTelegram.sendRawMessages")) {
                     messageUrl = String.join(" ", args).replace(" ", "%20");

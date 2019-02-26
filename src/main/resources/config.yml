@@ -10,6 +10,8 @@
 #             ID of the chat where priority messages will be sent.
 #         log:
 #             ID of the chat where log messages will be sent.
+#         log2:
+#             ID of the chat where log2 messages will be sent.
 #         public:
 #             ID of the chat where priority messages will be sent.
 bot:
@@ -17,4 +19,5 @@ bot:
     chatID:
         priority:
         log:
+        log2:
         public:

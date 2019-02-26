@@ -12,17 +12,19 @@ public class TelegramBot {
     private static String token = null;
     private static String priorityChatID = null;
     private static String logChatID = null;
+    private static String log2ChatID = null;
     private static String publicChatID = null;
     private static String urlModel = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s";
 
     protected enum MessageType {
-            PRIORITY, LOG, PUBLIC
+            PRIORITY, LOG, LOG2, PUBLIC
     }
 
     protected static boolean setupBot(FileConfiguration config) {
         token = config.getString("bot.token");
         priorityChatID = config.getString("bot.chatID.priority");
         logChatID = config.getString("bot.chatID.log");
+        log2ChatID = config.getString("bot.chatID.log2");
         publicChatID = config.getString("bot.chatID.public");
 
         if (token == null || priorityChatID == null || logChatID == null || publicChatID == null) {
@@ -40,6 +42,9 @@ public class TelegramBot {
                 break;
             case LOG:
                 chatID = logChatID;
+                break;
+            case LOG2:
+                chatID = log2ChatID;
                 break;
             case PUBLIC:
                 chatID = publicChatID;

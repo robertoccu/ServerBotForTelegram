@@ -23,6 +23,7 @@ public class ServerBotForTelegram extends JavaPlugin {
         getCommand("ayuda").setExecutor(new Commands());
         getCommand("priorityTelegram").setExecutor(new Commands());
         getCommand("logTelegram").setExecutor(new Commands());
+        getCommand("log2Telegram").setExecutor(new Commands());
         getCommand("publicTelegram").setExecutor(new Commands());
         TelegramBot.sendMessage("Acaba de abrirse el servidor o se ha habilitado ServerBot. ¡Server funcionado!", MessageType.LOG);
       } else {
