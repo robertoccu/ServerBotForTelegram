@@ -6,7 +6,7 @@
 
   <groupId>io.github.robertoccu</groupId>
   <artifactId>ServerBotForTelegram</artifactId>
-  <version>1.2.0</version>
+  <version>1.1.0_log2_1.15.1</version>
   <build>
     <plugins>
       <plugin>
@@ -35,7 +35,7 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.13.2-R0.1-SNAPSHOT</version>
+      <version>1.15.1-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

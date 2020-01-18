@@ -1,8 +1,8 @@
 name: ServerBotForTelegram
 description: Plugin that allow connection with Server Bot in Telegram.
 main: io.github.robertoccu.serverbotfortelegram.ServerBotForTelegram
-version: 1.2.0_log2
-api-version: 1.13
+version: 1.1.0_log2_1.15.1
+api-version: 1.15
 author: robertoccu
 soft-depend: [Vault]
 commands:
@@ -15,6 +15,9 @@ commands:
         usage: /<command> <message>
     logTelegram:
         description: Command to send a custom message to log Telegram chat configured.
+        usage: /<command> <message>
+    log2Telegram:
+        description: Command to send a custom message to log2 Telegram chat configured.
         usage: /<command> <message>
     publicTelegram:
         description: Command to send a custom message to public Telegram chat configured.
