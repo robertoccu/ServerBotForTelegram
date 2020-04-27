@@ -6,7 +6,7 @@
 
   <groupId>io.github.robertoccu</groupId>
   <artifactId>ServerBotForTelegram</artifactId>
-  <version>1.2</version>
+  <version>1.3</version>
   <build>
     <plugins>
       <plugin>

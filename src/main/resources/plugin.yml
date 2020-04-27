@@ -1,7 +1,7 @@
 name: ServerBotForTelegram
 description: Plugin that allow connection with Server Bot in Telegram.
 main: io.github.robertoccu.serverbotfortelegram.ServerBotForTelegram
-version: 1.2
+version: 1.3
 api-version: 1.15
 author: robertoccu
 soft-depend: [Vault]

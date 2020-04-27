@@ -2,6 +2,7 @@ package io.github.robertoccu.serverbotfortelegram;
 
 import io.github.robertoccu.serverbotfortelegram.TelegramBot.MessageType;
 import net.milkbowl.vault.permission.Permission;
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -63,5 +64,14 @@ public class ServerBotForTelegram extends JavaPlugin {
       e.printStackTrace();
       return false;
     }
+  }
+
+  public static String dynmapLink(String worldName, Location playerLocation) {
+    return String.format("http://vip.mcers.es:8123/index.html"
+            + "?worldname=%s&mapname=surface&zoom=8&x=%s&y=%s&z=%s",
+        worldName,
+        playerLocation.getBlockX(),
+        playerLocation.getBlockY(),
+        playerLocation.getBlockZ());
   }
 }
