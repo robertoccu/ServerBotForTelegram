@@ -27,6 +27,10 @@ public class ServerBotForTelegram extends JavaPlugin {
       return;
     }
 
+    // Event Listeners
+    PlayerListener playerListener = new PlayerListener();
+    getServer().getPluginManager().registerEvents(playerListener, this);
+
     try { // Command Errors
       getCommand("avisargm").setExecutor(new Commands());
       getCommand("priorityTelegram").setExecutor(new Commands());
