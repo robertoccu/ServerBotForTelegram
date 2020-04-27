@@ -1,14 +1,13 @@
 name: ServerBotForTelegram
 description: Plugin that allow connection with Server Bot in Telegram.
 main: io.github.robertoccu.serverbotfortelegram.ServerBotForTelegram
-version: 1.1.0_log2_1.15.1
+version: 1.2
 api-version: 1.15
 author: robertoccu
 soft-depend: [Vault]
 commands:
-    ayuda:
+    avisargm:
         description: Command to send a help message for server admins.
-        aliases: [ayuda]
         usage: /<command> <message>
     priorityTelegram:
         description: Command to send a custom message to priority Telegram chat configured.
